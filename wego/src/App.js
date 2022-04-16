@@ -3,19 +3,20 @@ import {CssBaseline, Grid} from '@material-ui/core';
 import Header from './components/Header/Header';
 import List from './components/List/List'
 import Map from './components/Map/Map'
+import { getPlacesDate } from './api';
 import './App.css';
 
 
 function App() {
   const [places, setPlaces] = useState([]);
   
-  // useEffect(() => {
-  //   getPlacesDate()
-  //     .then((data) => {
-  //       console.log(data);
-  //       setPlaces(data);
-  //     })
-  // }, []);
+  useEffect(() => {
+    getPlacesDate()
+      .then((data) => {
+        console.log(data);
+        setPlaces(data);
+      })
+  }, []);
 
 
   return (
