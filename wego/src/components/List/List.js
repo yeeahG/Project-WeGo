@@ -3,19 +3,21 @@ import { CircularProgress, Grid, Typography, MenuItem, FormControl, Select, Inpu
 import PlaceDetails from '../PlaceDatails/PlaceDatails'
 
 //46:34
-const List = () => {
+const List = ({places}) => {
   const [type, setType] = useState('restaurants');
   const [rating, setRating] = useState('');
-  const places = [
-    {name: 'Cool Place'},
-    {name: 'Delicious Food'},
-    {name: 'Good'},
-    {name: 'Cool Place'},
-    {name: 'Delicious Food'},
-    {name: 'Good'},
-    {name: 'Cool Place'},
-    {name: 'Delicious Food'},
-  ];
+  //console.log(data[0].name);
+  console.log(places);
+  // const places = [
+  //   //{name: data[0].name},
+  //   {name: 'Delicious Food'},
+  //   {name: 'Good'},
+  //   {name: 'Cool Place'},
+  //   {name: 'Delicious Food'},
+  //   {name: 'Good'},
+  //   {name: 'Cool Place'},
+  //   {name: 'Delicious Food'},
+  // ];
 
   return (
     <div>

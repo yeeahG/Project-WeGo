@@ -24,7 +24,8 @@ function App() {
     console.log(coordinates, bounds);
     getPlacesData()
       .then((data) => {
-        console.log(data);
+        // console.log(data);
+        console.log(data[0].name);
         setPlaces(data);
       })
   }, [coordinates, bounds]);
@@ -37,7 +38,7 @@ function App() {
       <Grid container spacing={3} style={{ width: '100%'}}>
 
         <Grid item xs={12} md={4}>
-          <List />
+          <List places={places}/>
         </Grid>
 
         <Grid item xs={12} md={8}>
