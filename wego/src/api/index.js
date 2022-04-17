@@ -5,7 +5,6 @@ const API_KEY = process.env.REACT_APP_TRAVEL_ADVISOR_KEY;
 
 // https://rapidapi.com/apidojo/api/travel-advisor/
 const options = {
-    
     params: {
       bl_latitude: '11.847676',
       tr_latitude: '12.838442',
