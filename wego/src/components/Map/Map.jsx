@@ -17,7 +17,7 @@ const Map = ({setCoordinates, setBounds, coordinates, places}) => {
     width: '100%',
     height: '85vh'
   };
-
+  
   // const coordinates = {
   //   lat: 38.0,
   //   lng: -100.0,
@@ -42,6 +42,8 @@ const Map = ({setCoordinates, setBounds, coordinates, places}) => {
   }, [])
 
   
+
+
   return isLoaded ? (
       <GoogleMap
         bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLEMAP_API_KEY }}
@@ -70,7 +72,7 @@ const Map = ({setCoordinates, setBounds, coordinates, places}) => {
           // icon={{
           //   url: "/Image/marker.png",
           // }}
-          name={"Current location"}
+          title={"one"}
           position={coordinates}
         />
       {/* {places.map(() => (
