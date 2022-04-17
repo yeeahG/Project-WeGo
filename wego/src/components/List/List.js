@@ -15,10 +15,6 @@ const List = () => {
     {name: 'Good'},
     {name: 'Cool Place'},
     {name: 'Delicious Food'},
-    {name: 'Good'},
-    {name: 'Cool Place'},
-    {name: 'Delicious Food'},
-    {name: 'Good'},
   ];
 
   return (
@@ -49,9 +45,9 @@ const List = () => {
 
         <Grid container spacing={3}>
           {/*Only have places*/}
-          {places ?.map((place, i) => (
+          {places ?.map((places, i) => (
             <Grid item key={i} xs={12}>
-              <PlaceDetails place={place} />
+              <PlaceDetails places={places} />
             </Grid>
           ))}
         </Grid>

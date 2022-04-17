@@ -1,8 +1,10 @@
 import React from 'react'
 
-const PlaceDatails = ( {place} ) => {
+const PlaceDatails = ( {places} ) => {
   return (
-    <h1>{place.name}</h1>
+    <div>
+      <h1>{places.name}</h1>
+    </div>
   )
 }
 
