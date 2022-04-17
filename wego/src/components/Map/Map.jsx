@@ -12,7 +12,10 @@ const Map = ({setCoordinates, setBounds, coordinates, places}) => {
   const classes = useStyles();
   const isMobile = useMediaQuery('(min-width:600px)');
   // const coordinates = {lat:0, lng:0};
-  
+  //console.log(setCoordinates);
+  //console.log(setBounds);
+  console.log(places[0]);
+
   const containerStyle = {
     width: '100%',
     height: '85vh'
@@ -41,8 +44,6 @@ const Map = ({setCoordinates, setBounds, coordinates, places}) => {
     setMap(null)
   }, [])
 
-  
-
 
   return isLoaded ? (
       <GoogleMap
@@ -55,11 +56,11 @@ const Map = ({setCoordinates, setBounds, coordinates, places}) => {
         onUnmount={onUnmount}
         margin={[50, 50, 50, 50]}
         options={''}
-        // onChange={(e) => {
-        //   console.log(e);
-        //   setCoordinates({lat: e.center.lat, lng: e.center.lng})
-        //   setBounds({ne : e.marginBounds.ne, sw: e.marginBounds.sw})
-        // }}
+        onChange={(e) => {
+          console.log(e);
+          setCoordinates({lat: e.places.lat, lng: e.places.lng})
+          setBounds({ne : e.marginBounds.ne, sw: e.marginBounds.sw})
+        }}
         onChildClick={''}
       >
         { /* Child components, such as markers, info windows, etc. */ }
