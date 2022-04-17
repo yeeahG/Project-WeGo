@@ -1,10 +1,15 @@
 import React, {useState} from 'react'
 import { CircularProgress, Grid, Typography, MenuItem, FormControl, Select, InputLabel } from '@material-ui/core'
 
+//46:34
 const List = () => {
   const [type, setType] = useState('restaurants');
   const [rating, setRating] = useState('');
-
+  const places = [
+    {name: 'Cool Place'},
+    {name: 'Delicious Food'},
+    {name: 'Good'},
+  ];
 
   return (
     <div>
@@ -30,6 +35,15 @@ const List = () => {
             <MenuItem value={4.5}>Above 4.5</MenuItem>
           </Select>
         </FormControl>
+
+        <Grid container spacing={3}>
+          {/*Only have places*/}
+          {places?.map((place, i) =>{
+            <Grid item key={i} xs={12}>
+              {/* <CARD /> */}
+            </Grid>
+          })}
+        </Grid>
     </div>
   )
 }
